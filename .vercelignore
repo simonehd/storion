@@ -1,0 +1,12 @@
+.env*
+!.env.example
+.git
+.next
+node_modules
+Storion_Documentation_Pack_v3
+tests
+scripts
+/supabase/
+.local-tests
+.vercel
+*.tsbuildinfo

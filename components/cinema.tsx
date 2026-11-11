@@ -1,0 +1,13 @@
+import Link from 'next/link'
+export function CinemaIcon({kind='film'}:{kind?:string}){return <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">{kind==='people'?<><circle cx="12" cy="10" r="5"/><path d="M3 28v-5c0-7 18-7 18 0v5ZM23 5c7 0 7 10 0 10M25 20c5 0 5 5 5 8"/></>:kind==='globe'?<><circle cx="16" cy="16" r="13"/><ellipse cx="16" cy="16" rx="6" ry="13"/><path d="M3 16h26M6 8h20M6 24h20"/></>:kind==='layers'?<path d="m16 3 14 8-14 8L2 11Zm-14 15 14 8 14-8M2 24l14 7 14-7"/>:<><path d="M3 12h26v17H3ZM3 12 1 5l25-4 2 7ZM8 4l6 6M18 2l6 6M3 18h26"/><path d="m15 21 4 3-4 3Z"/></>}</svg>}
+export type VisualStory={title:string;format:string;genre:string;image:string;id?:string}
+const photo=(id:string)=>(["photo-1500534623283-312aade485b7","photo-1455390582262-044cdead277a","photo-1531366936337-7c912a4589a7","photo-1580060839134-75a5edca2e99","photo-1516026672322-bc52d61a55d5","photo-1564507592333-c60657eea523","photo-1446776811953-b23d57bd21aa","photo-1483729558449-99ef09a8c325","photo-1489749798305-4fea3ae63d43","photo-1493976040374-85c8e12f0c0e"].includes(id)?'/cinema/'+id+'.jpg':'/stories-in-motion.webp')
+export const visualStories:VisualStory[]=[
+ {title:'The Last Baobab',format:'Film',genre:'Drama',image:photo('photo-1516026672322-bc52d61a55d5'),id:'the-last-baobab'},
+ {title:'Orbit 9',format:'Series',genre:'Sci-Fi',image:photo('photo-1446776811953-b23d57bd21aa')},
+ {title:'Isikhumba',format:'Film',genre:'Documentary',image:'/south-africa-editorial.webp'},
+ {title:'The Inked Truth',format:'Book',genre:'Fiction',image:photo('photo-1455390582262-044cdead277a')},
+ {title:'Between Tides',format:'Film',genre:'Romance',image:photo('photo-1580060839134-75a5edca2e99'),id:'between-tides'},
+]
+export function VisualCard({story}:{story:VisualStory}){return <Link href={story.id?`/projects/${story.id}`:'/discover'} className="visual-card" style={{backgroundImage:`linear-gradient(0deg,#06090de8,transparent 78%),url("${story.image}")`}}><span className="bookmark" aria-hidden="true"><svg viewBox="0 0 24 28" fill="none" stroke="currentColor" strokeWidth="1.7"><path d="M5 3h14v22l-7-5-7 5Z"/></svg></span><div><h3>{story.title}</h3><p>{story.format}<span>·</span>{story.genre}</p></div></Link>}
+export function StoryRail({title,stories=visualStories,icon='film'}:{title:string;stories?:VisualStory[];icon?:string}){return <section className="story-rail"><div className="rail-heading"><h2><CinemaIcon kind={icon}/>{title}</h2><Link href="/discover">View All <span>→</span></Link></div><div className="visual-rail">{stories.map(s=><VisualCard key={s.title} story={s}/>)}</div></section>}

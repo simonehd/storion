@@ -1,0 +1,13 @@
+Storion individual artwork assets — generated with the built-in image generation tool.
+All images were requested without text, logos or UI. None is a reference screenshot.
+Original generated PNG files are retained in the Codex generated_images folder.
+
+baobab.webp: Cinematic landscape story cover: immense African baobab at orange sunset, small traveler, sculptural branches, photoreal film-poster lighting.
+orbit.webp: Cinematic close portrait of a Black woman astronaut, ivory/black space helmet, warm gold rim, determined gaze, navy space and reflective visor.
+carnival.webp: Brazilian performer in orange, yellow and turquoise feather headdress, gold face adornment, dark background, warm cinematic light.
+inked.webp: Black woman in profile with luminous gold ink filaments and particles across her cheek against black space, amber fine-art portrait.
+river.webp: Two Black African adults in profile, woman foreground and man behind, blue river and distant mountains, natural hair, golden light and cool blue palette.
+typewriter.webp: Vintage black typewriter with blank paper on a desk outdoors, African landscape and amber sunset, nostalgic historical-drama cover.
+earth.webp: Wide cinematic Earth horizon from orbit with Africa, city lights, warm gold sunrise and electric blue atmosphere; upper area deep navy space. No satellite, spacecraft, camera or people.
+
+Assets were encoded as WebP with the existing Sharp dependency. Other images used by the review views are existing individual local photographs and standalone generated hero artwork.

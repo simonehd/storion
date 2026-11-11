@@ -1,0 +1,7 @@
+Generated with the built-in image_gen tool for the UI redesign. Reference images were not edited. Outputs encoded as WebP with the existing Sharp package.
+
+south-africa-editorial.webp prompt:
+Create a new wide 16:9 cinematic website background, no text or UI. South African cultural editorial: on the right half a dignified Black South African woman in a richly woven orange, red and gold headwrap with delicate white face-paint dots and gold earrings, gazing towards a warm sunset. Table Mountain and Cape Town landscape across the middle distance. Left third dark navy negative space for live headings. Deep black edges, luminous orange sunset clouds, premium photoreal film still. Do not reproduce an interface or modify any reference image.
+
+stories-in-motion.webp prompt:
+New cinematic website banner background, very wide landscape 16:9. On the right half a film camera operator in dark silhouette wearing a baseball cap operating a professional cinema camera, second crew member beside camera, glowing orange and gold sunset over an African landscape, deep navy shadows. Left half quiet dark charcoal negative space for website heading. Refined photoreal film still. No text, no logos, no UI, no borders. Match a premium dark cinematic website's warm amber lighting.

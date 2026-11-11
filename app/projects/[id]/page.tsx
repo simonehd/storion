@@ -1,0 +1,11 @@
+import Link from 'next/link'
+import { notFound } from 'next/navigation'
+import { getProject } from '@/lib/data'
+import { projectImage } from '@/lib/demo'
+import { ProjectControls } from '@/components/project-controls'
+export default async function ProjectPage({params}:{params:Promise<{id:string}>}) {
+  const {id}=await params; const project=await getProject(id); if(!project)notFound()
+  return <main className="section page project-detail-page"><Link href="/discover" className="text-link">← Back to Projects</Link><section className="detail-hero glass" style={{backgroundImage:`linear-gradient(90deg,#080d11ee,#080d1144),url("${projectImage(project)}")`}}><p className="eyebrow">{project.demo?'CURATED DEMONSTRATION PROJECT':project.visibility}</p><h1>{project.title}</h1><p className="metadata">{project.format} · {project.genres.join(', ')} · {project.stage.replaceAll('_',' ')}</p><p className="lead pre-wrap">{project.synopsis}</p>{!project.demo&&<Link className="text-link" href={`/people/${project.owner_id}`}>View creator profile →</Link>}</section><nav className="detail-tabs" aria-label="Project sections"><a href="#project-overview">Overview</a><Link href={`/projects/${id}/matches`}>AI Matches</Link><Link href={`/projects/${id}/interest`}>Express Interest</Link></nav><div className="detail-grid" id="project-overview"><section className="glass panel"><h2>Project details</h2><dl>{[['Format',project.format],['Genre',project.genres.join(', ')],['Stage',project.stage.replaceAll('_',' ')],['Location',project.countries.join(', ')],['Languages',project.languages.join(', ')],['Themes',project.themes.join(', ')],['Budget',project.budget!==null?`${project.currency} ${project.budget.toLocaleString()}`:'Not specified']].map(([k,v])=><div key={k}><dt>{k}</dt><dd>{v||'Not specified'}</dd></div>)}</dl></section><section className="glass panel"><h2>Looking for</h2>{project.looking_for.map(n=><p key={n}>◇ {n}</p>)}<Link href={`/projects/${id}/interest`} className="button full">☆ Express Interest</Link><Link href={`/projects/${id}/matches`} className="button secondary full">✦ Explore AI Matches</Link>{project.demo&&<p className="muted">Fictional example for exploring Storion. Publish a real project to receive interest.</p>}</section></div>{!project.demo&&<ProjectControls id={id} owner={project.owner_id}/>}</main>
+}
+
+

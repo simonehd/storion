@@ -1,0 +1,5 @@
+Asset: storion-hero.webp
+Generated with the built-in image_gen tool on 2026-11-11, then encoded as WebP using the existing Sharp dependency. No reference file was edited.
+
+Prompt:
+Use case: stylized-concept. Asset type: wide cinematic website hero background for Storion, a global marketplace connecting stories with opportunities. Create a photoreal cinematic scene, 16:9 landscape. A large curved planet Earth with a blue atmospheric rim and warm amber city lights occupies the right two thirds, rising over a dark cloudy horizon with a golden sunrise. In the right foreground a classic black twin-reel motion-picture camera on a tripod, and an empty director's chair to its left, warmly rim-lit in gold. Deep charcoal/near-black navy left third stays quiet and dark for live website text. Premium, atmospheric, realistic metal and leather, luminous orange/gold sunrise, subtle cloud detail. Camera and chair entirely in right half, no people, no spacecraft or satellite. No text, letters, logos, watermarks, interface, cards or buttons. This is a new standalone website background asset; do not modify any reference screenshot.
